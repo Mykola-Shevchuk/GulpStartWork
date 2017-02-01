@@ -25,8 +25,7 @@ gulp.task('css', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/jquery-ui/jquery-ui.min.js'
+		'app/libs/jquery/dist/jquery.min.js'
 		])
 	.pipe(concat('libs.min.js')) // Назва висхідного файлу (файл1 + файл2 = файл 3)
 	.pipe(uglify())
@@ -88,9 +87,6 @@ gulp.task('build', ['clean', 'img', 'css', 'scripts'], function() {
 
 	var buildJs = gulp.src('app/js/*.js')
 	.pipe(gulp.dest('dist/js'));
-
-	var buildFonts = gulp.src('app/fonts/**/*')
-	.pipe(gulp.dest('dist/fonts'));
 
 	var buildHtml = gulp.src('app/*.html')
 	.pipe(gulp.dest('dist'));

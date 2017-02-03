@@ -130,6 +130,7 @@ ul.right-nav-bar-navigation {
 
 ul.header-menu {
 	float: left;
+	font-size: 0;
 
 	li {
 		@extend .links-style;
@@ -221,9 +222,10 @@ main {
 
 .menu-catalog {
 	margin-top: 50px;
+	font-size: 0;
 
 	ul {
-		width: 572px;
+		width: 592px;
 		margin: 0px auto;
 	}
 
@@ -242,21 +244,18 @@ main {
 
 .goods {
 	margin-top: 30px;
+	
 
 	figure {
-		width: 263px;
+		
 		text-align: center;
-		display: inline-block;
-		margin-right: 25px;
 		position: relative;
-
-		&:nth-child(4n + 4) {
-			margin-right: 0;
-		}
 
 		img {
 			max-width: 263px;
 			width: 263px;
+			max-height: 336px;
+			height: 336px;
 		}
 
 		figcaption {
@@ -264,6 +263,13 @@ main {
 			font: normal 16px 'Playfair', serif;
 		}
 	}
+}
+
+.flex-grid {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .new-goods {
@@ -396,6 +402,7 @@ footer {
 .footer-menu {
 	float: left;
 	margin-left: 200px;
+	font-size: 0;
 
 	li {
 		@extend .links-style;

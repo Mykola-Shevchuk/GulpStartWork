@@ -57,13 +57,13 @@ header {
 
 .nav-bar {
 	@extend .links-style;
-	height: 40px;
+	height: 45px;
 	border-bottom: 1px solid $border-color;
-	font: bold 11px/40px 'Lato', serif;
+	font: bold 11px/45px 'Lato', serif;
 }
 
 .nav-bar-li-style {
-	margin-right: 40px;
+	margin-right: 30px;
 	display: inline-block;
 }
 
@@ -93,9 +93,9 @@ ul.right-nav-bar-navigation {
 	right: 0;
 	top: 0;
 
-	li {
+	& > li {
 		@extend .nav-bar-li-style;
-		padding-right: 20px;
+		padding-right: 0;
 		position: relative;
 
 		ul {
@@ -107,10 +107,20 @@ ul.right-nav-bar-navigation {
 		}
 
 		&:first-child {
-			border-right: 1px solid $border-color;
-			margin-right: 20px;
+			margin: 0;
+		}
+
+		&:last-child {
+			left: 35px;
 		}
 	}
+}
+
+.border-line {
+	border-right: 1px solid $border-color;
+	position: absolute;
+    height: 45px;
+    right: 50px;
 }
 
 .down-arrow {
@@ -124,6 +134,7 @@ ul.currency {
     z-index: 1;
     color: #fff;
     left: -10px;
+    top: 45px;
     width: 97px;
     display: none;
 
@@ -175,7 +186,7 @@ ul.header-menu {
 		@extend .links-style;
 		display: inline-block;
 		font: bold 12px/100px 'Lato', serif;
-		margin-right: 40px;
+		margin-right: 59px;
 
 		&:last-child {
 			margin-right: 0;
@@ -191,13 +202,13 @@ a.hot {
 
 .active {
 	border-bottom: 2px solid #1579d5;
-    padding-bottom: 5.5px;
+    padding-bottom: 5px;
     color: #000000 !important;
 }
 
 .bag-and-search {
 	float: left;
-	margin-left: 115px;
+	margin-left: 118px;
 	font: bold 12px/100px 'Lato', serif;
 }
 
@@ -234,7 +245,7 @@ a.hot {
 }
 
 .main-search {
-	background: url('/img/search-ico.png') no-repeat center center;
+	background: url('../img/search-ico.png') no-repeat center center;
 	float: left;
 	width: 14px;
 	height: 100px;
@@ -262,7 +273,7 @@ main {
 	font-size: 0;
 
 	ul {
-		width: 592px;
+		width: 627px;
 		margin: 0px auto;
 	}
 
@@ -270,7 +281,7 @@ main {
 		@extend .links-style;
 		display: inline-block;
 		font: bold 12px 'Lato', serif;
-		margin-right: 40px;
+		margin-right: 55px;
 
 		&:last-child {
 			margin-right: 0;
@@ -311,8 +322,8 @@ main {
 
 .new-goods {
 	position: absolute;
-	left: 25px;
-	top:25px;
+	left: 28px;
+	top:43px;
 	font: bold 11px/25px 'Lato', serif;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -327,11 +338,11 @@ main {
 }
 
 .goods-name {
-	margin-top: 20px;
+	margin-top: 34px;
 }
 
 .goods-price {
-	margin: 10px 0px 30px 0px;
+	margin: 6px 0px 30px 0px;
 	color: #aaaaaa;
 	font-family: 'Lato', serif;
 
@@ -345,9 +356,10 @@ main {
 }
 
 .more-information {
-	margin-top: 50px;
+	margin-top: 24px;
 	text-align: center;
 	text-transform: uppercase;
+	letter-spacing: 2px;
 
 	a {
 		text-decoration: none;
@@ -363,27 +375,29 @@ main {
 .subscribe {
 	height: 287px;
 	width: 100%;
-	margin-top: 60px;
+	margin-top: 46px;
 	text-align: center;
-	background: url('/img/bg-sub.jpg') no-repeat center center;
+	background: url('../img/bg-sub.jpg') no-repeat center center;
 	background-size: 100%;
 }
 
 h3.title-subscribe {
-	padding-top: 70px;
+	padding-top: 76px;
 	color: #858585;
 	font: bold 12px 'Lato', serif;
 	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 h1.description-subscribe {
-	padding-top: 25px;
+	padding-top: 18px;
 	color: #ffffff;
 	font: normal 38px 'Playfair', serif;
+	letter-spacing: 2px;
 }
 
 form.email-form {
-	padding-top: 20px;
+	padding-top: 25px;
 	position: relative;
 	width: 307px;
 	margin: 0 auto;
@@ -394,11 +408,10 @@ form.email-form {
   		border: 2px solid #ffffff;
   		border-color: rgba(255, 255, 255, .3);
   		letter-spacing: 1px;
-  		word-spacing: 2px;
   		color: #ffffff;
   		border-radius: 25px;
   		outline: none;
-  		text-indent: 20px;
+  		text-indent: 27px;
   		text-transform: uppercase;
   		font: bold 13px 'Lato', serif;
   		background: inherit;
@@ -411,12 +424,12 @@ form.email-form {
 
 	button {
 		position: absolute;
-		right: 15px;
-		top: 40px;
+		right: 17px;
+		top: 45px;
 		width: 6px;
 		height: 10px;
 		border: 0;
-		background: url('/img/e-mail-arrow.png') no-repeat;
+		background: url('../img/e-mail-arrow.png') no-repeat;
 	}
 }
 
@@ -424,6 +437,7 @@ form.email-form {
 
 footer {
 	height: 100px;
+	margin-top: 12px;
 }
 
 .logo-footer {
@@ -445,7 +459,7 @@ footer {
 		@extend .links-style;
 		display: inline-block;
 		font: bold 12px/100px 'Lato', serif;
-		margin-right: 40px;
+		margin-right: 54px;
 		line-height: 100px;
 
 		&:last-child {

@@ -22,19 +22,9 @@ $(document).ready(function($) {
 
 	/*CURRENCY AND LANUAGES NAV BAR*/
 
-	var $currencyPanel = $('.currency-panel'),
-		$currency = $currencyPanel.find('.currency'),
-		$languagesPanel = $('.languages-panel'),
-		$languages = $languagesPanel.find('.languages');
-
-		$currencyPanel.on('click', function() {
-			$currencyPanel.find('ul').toggleClass('down-arrow');
-			$currency.slideToggle();
-		});
-
-		$languagesPanel.on('click', function() {
-			$languagesPanel.find('ul').toggleClass('down-arrow');
-			$languages.slideToggle();
+		$('.right-nav-bar-navigation').on('click', 'li', function() {
+			$(this).find('ul').toggleClass('down-arrow');
+			$(this).find('ul:last-child').slideToggle();
 		});
 
 });
